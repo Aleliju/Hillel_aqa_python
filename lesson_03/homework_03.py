@@ -70,12 +70,12 @@ a) 8019 : 8     d) 7248 : 6
 b) 9907 : 9     e) 7128 : 5
 c) 2789 : 5     f) 19224 : 9
 """
-a = 8019 / 8
-b = 9907 / 9
-c = 2789 / 5
-d = 7248 / 6
-e = 7128 / 5
-f = 19224 / 9
+a = 8019 % 8
+b = 9907 % 9
+c = 2789 % 5
+d = 7248 % 6
+e = 7128 % 5
+f = 19224 % 9
 print(a)
 print(b)
 print(c)
@@ -101,8 +101,8 @@ pizza_small = 2 * 218
 juice = 4 * 35
 cake = 1 * 350
 water = 3 * 21
-total_coast = pizza_big + pizza_small + juice + cake +water
-print("Total coast:", total_coast)
+total_cost = pizza_big + pizza_small + juice + cake +water
+print("Total coast:", total_cost)
 
 # task 09
 """
