@@ -42,7 +42,7 @@ print(adwentures_of_tom_sawer)
 # task 04
 """ Виведіть, скількі разів у тексті зустрічається літера "h"
 """
-print("Amount of h:", adwentures_of_tom_sawer.find("h"))
+print("Amount of h:", adwentures_of_tom_sawer.count("h"))
 
 
 # task 05
@@ -52,7 +52,7 @@ separate_words = adwentures_of_tom_sawer.split()
 count = 0
 
 for word in separate_words:
-    if word.startswith(tuple("ABCDEFGHIJKLMNOPQRSTUVWXYZ")):
+    if word.istitle():
         count += 1
 
 print("Amount of upper letters:", count)
@@ -62,14 +62,13 @@ print("Amount of upper letters:", count)
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
 """
-print("Place of Tom:", adwentures_of_tom_sawer.find("Tom", 1))
+print("Place of second 'Tom':", adwentures_of_tom_sawer.find("Tom", adwentures_of_tom_sawer.find("Tom") + 1))
 
 # task 07
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-adwentures_of_tom_sawer_sentences = None  # Если я правильно понимаю то это инициализация переменной и ее можно не использовать, а то на нее ругается PEP 8
-adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(".")
+adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(". ")
 print("Split sentences", adwentures_of_tom_sawer_sentences)
 
 # task 08
@@ -89,4 +88,4 @@ for sentence in adwentures_of_tom_sawer_sentences:
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
-print("Amount of words in the last sentence:", len(adwentures_of_tom_sawer_sentences[-2].strip().split()))
+print("Amount of words in the last sentence:", len(adwentures_of_tom_sawer_sentences[-1].strip().split()))
