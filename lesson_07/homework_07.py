@@ -11,8 +11,8 @@ def multiplication_table(number):
     while multiplier < 6:
         result = number * multiplier
         # десь тут помила, а може не одна
-        if  result > 25:
-            # Enter the action to take if the result is greater than 25
+        if result > 25:
+           # Enter the action to take if the result is greater than 25
             print('Sum more than 25')
             pass
         print(str(number) + "x" + str(multiplier) + "=" + str(result))
@@ -94,6 +94,10 @@ print(find_substring(str1, str2)) # поверне -1
 
 print("-" * 100)
 
+"""  Оберіть будь-які 4 таски з попередніх домашніх робіт та
+перетворіть їх у 4 функції, що отримують значення та повертають результат.
+Обоязково документуйте функції та дайте зрозумілі імена змінним.
+"""
 # task 7
 def word_with_letter_h(input_word):
     """Check enter name contain letter H.
@@ -176,7 +180,3 @@ print("Amount of pair numbers:", sum_of_pair_numbers(lst1))
 
 print("-" * 100)
 
-"""  Оберіть будь-які 4 таски з попередніх домашніх робіт та
-перетворіть їх у 4 функції, що отримують значення та повертають результат.
-Обоязково документуйте функції та дайте зрозумілі імена змінним.
-"""
