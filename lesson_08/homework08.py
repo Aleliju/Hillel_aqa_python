@@ -8,20 +8,16 @@ def sum_of_all_numbers(list_of_numbers):
    Returns:
         None: The function prints the intermediate steps, and the final result or an error message.
    """
-    try:
-        split_string = [e.split(',') for e in list_of_numbers]
-        print(split_string)
-        list_int = [list(map(int, i)) for i in split_string]
-        print(list_int)
-        sums = [sum(i) for i in list_int]
-        print(sums)
-    except ValueError as e:
-        print(f"Can't do it!: {e}")
-    else:
-        print(f"Результат: {sums}")
+    for string in list_of_numbers:
+        try:
+            split_string = string.split(',')
+            list_int = list(map(int, split_string))
+            total_sums = sum(list_int)
+            print(f"Sum of '{string}': {total_sums}")
+        except ValueError as e:
+            print(f"Can't do it for '{string}': {e}")
 
-enter_data = ['1,2,3,4', '1,2,3,4,50', '1,2,3']
+
+enter_data = ['1,2,3,4', '1,2,3,4,50', 'qwerty1,2,3']
 sum_of_all_numbers(enter_data)
-
-#prints for check
 
