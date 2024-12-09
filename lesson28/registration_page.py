@@ -7,21 +7,21 @@ class RegistrationPage:
     def __init__(self, driver):
         self.driver = driver
 
-    def signup_name_input_field(self):
+    def signup_name_input_field(self, name):
         signup_name_input = self.driver.find_element(By.XPATH, "//input[@id= 'signupName']")
-        signup_name = 'al'
+        signup_name = name
         signup_name_input.clear()
         signup_name_input.send_keys(signup_name)
 
-    def signup_last_name_input_field(self):
+    def signup_last_name_input_field(self, last_name):
         signup_last_name_input = self.driver.find_element(By.XPATH, "//input[@id= 'signupLastName']")
-        signup_last_name = 'vas'
+        signup_last_name = last_name
         signup_last_name_input.clear()
         signup_last_name_input.send_keys(signup_last_name)
 
-    def email_input_field(self):
-        base_email = "vas"
-        domain = "@ukr.net"
+    def email_input_field(self, email, domain):
+        base_email = email
+        domain = domain
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
         unique_email = f'{base_email}{timestamp}{domain}'
         email_input = self.driver.find_element(By.XPATH, "//input[@id= 'signupEmail']")

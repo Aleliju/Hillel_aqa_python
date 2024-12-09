@@ -22,9 +22,9 @@ def test_registration(driver):
     main_page.open_main_page("https://guest:welcome2qauto@qauto2.forstudy.space")
     main_page.sign_up_button()
 
-    registration_page.signup_name_input_field()
-    registration_page.signup_last_name_input_field()
-    registration_page.email_input_field()
+    registration_page.signup_name_input_field('al')
+    registration_page.signup_last_name_input_field('vas')
+    registration_page.email_input_field("vas", "@ukr.net")
     registration_page.password_input_field()
     registration_page.re_enter_password_input()
     registration_page.register_button()
