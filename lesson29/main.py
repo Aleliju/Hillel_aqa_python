@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Table, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 
-DATABASE_URL = "postgresql://obog:tcamry@postgres/lesson22"
+DATABASE_URL = "postgresql://obog:tcamry@postgres-db/lesson22"
 
 engine = create_engine(DATABASE_URL)
 Base = declarative_base()
