@@ -8,6 +8,9 @@ class TrackingPage(BasePage):
     INFO_POPUP = (By.XPATH, "//div[@class='first-visit-helper-wrapper d-flex flex-column tracking-desktop']")
     STATUS_TEXT = (By.XPATH, "//div[@class='header__status-text']")
 
+    def open_page(self, url):
+        self.driver.get(url)
+
     def enter_ttn(self, ttn):
         self.input_text(self.TTN_INPUT, ttn)
 
@@ -19,3 +22,9 @@ class TrackingPage(BasePage):
 
     def get_status(self):
         return self.get_text(self.STATUS_TEXT)
+
+    def search_tracking_status(self, ttn):
+        self.enter_ttn(ttn)
+        self.click_search()
+        self.close_info_popup()
+        return self.get_status()
