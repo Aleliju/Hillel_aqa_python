@@ -20,14 +20,14 @@ def test_registration(driver):
     garage_page = GaragePage(driver)
 
     main_page.open_main_page("https://guest:welcome2qauto@qauto2.forstudy.space")
-    main_page.sign_up_button()
+    main_page.click_sign_up_button()
 
-    registration_page.signup_name_input_field('al')
-    registration_page.signup_last_name_input_field('vas')
-    registration_page.email_input_field("vas", "@ukr.net")
-    registration_page.password_input_field()
-    registration_page.re_enter_password_input()
-    registration_page.register_button()
+    registration_page.input_signup_name('al')
+    registration_page.input_signup_last_name('vas')
+    registration_page.input_email("vas", "@ukr.net")
+    registration_page.input_password()
+    registration_page.input_re_enter_password()
+    registration_page.click_register_button()
 
     assert garage_page.wait_for_logout_button().text == 'Log out'
 
